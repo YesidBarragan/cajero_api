@@ -31,6 +31,7 @@ api.add_middleware(
     allow_credentials=True, allow_methods=["*"], allow_headers=["*"],
 )
 
+'''
 @api.post("/user/auth/")
 async def auth_user(user_in: UserIn):
     user_in_db = get_user(user_in.username)
@@ -67,3 +68,4 @@ async def make_transaction(transaction_in: TransactionIn):
     transaction_in_db = save_transaction(transaction_in_db)
     transaction_out = TransactionOut(**transaction_in_db.dict())
     return transaction_out
+'''
