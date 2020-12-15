@@ -12,3 +12,6 @@ class TransactionOut(BaseModel): #Datos que necesito al finalizar la transacció
     date: datetime
     value: int
     actual_balance: int
+
+class Config:
+    orm_mode = True
